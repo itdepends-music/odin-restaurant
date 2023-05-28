@@ -1,2 +1,4 @@
-# odin-template
-Template repository for projects from TOP
+# odin-restaurant
+
+Restaurant project from TOP[https://www.theodinproject.org]
+

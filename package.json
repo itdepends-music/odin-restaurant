@@ -1,5 +1,5 @@
 {
-    "name": "odin-template",
+    "name": "odin-restaurant",
     "version": "1.0.0",
     "description": "Template repository for projects from TOP",
     "main": "index.js",
@@ -20,3 +20,4 @@
         "webpack-cli": "^5.1.0"
     }
 }
+
