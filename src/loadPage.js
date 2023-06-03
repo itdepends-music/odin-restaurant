@@ -1,7 +1,4 @@
-function loadPage() {
-    const contentDiv = document.getElementById('content');
-
-    // header
+function makeHeader() {
     const headerDiv = document.createElement('div');
     headerDiv.classList.add('header');
 
@@ -9,9 +6,10 @@ function loadPage() {
     header.textContent = 'HEADER';
     headerDiv.appendChild(header);
 
-    contentDiv.appendChild(headerDiv);
+    return headerDiv;
+}
 
-    // main content
+function makeMainContent() {
     const mainDiv = document.createElement('div');
     mainDiv.classList.add('main');
 
@@ -37,9 +35,11 @@ function loadPage() {
     mainFigure.appendChild(mainFigureCaption);
 
     mainDiv.appendChild(mainFigure);
-    contentDiv.appendChild(mainDiv);
 
-    // footer
+    return mainDiv;
+}
+
+function makeFooter() {
     const footerDiv = document.createElement('div');
     footerDiv.classList.add('footer');
 
@@ -47,7 +47,14 @@ function loadPage() {
     footerParagraph.textContent = '\u00A9 2023 Oscar Robertson';
     footerDiv.appendChild(footerParagraph);
 
-    contentDiv.appendChild(footerDiv);
+    return footerDiv;
+}
+
+function loadPage() {
+    const contentDiv = document.getElementById('content');
+    contentDiv.appendChild(makeHeader());
+    contentDiv.appendChild(makeMainContent());
+    contentDiv.appendChild(makeFooter());
 }
 
 export default loadPage;
