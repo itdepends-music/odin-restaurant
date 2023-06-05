@@ -47,9 +47,10 @@ function loadPage() {
 
 function changePage(pageFunc) {
     const contentDiv = document.getElementById('content');
-    const mainDiv = contentDiv.getElementsByClassName('main');
+    const mainDiv = contentDiv.getElementsByClassName('main')[0];
+    const footerDiv = contentDiv.getElementsByClassName('footer')[0];
     contentDiv.removeChild(mainDiv);
-    contentDiv.appendChild(pageFunc());
+    contentDiv.insertBefore(pageFunc(), footerDiv);
 }
 
 export default loadPage;
