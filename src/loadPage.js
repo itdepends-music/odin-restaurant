@@ -1,14 +1,30 @@
 import homePage from './homePage';
 
 function makeHeader() {
-    const headerDiv = document.createElement('div');
-    headerDiv.classList.add('header');
+    const PAGES = [
+        [homePage, 'Home'],
+        [homePage, 'Contact'],
+        [homePage, 'Menu'],
+    ];
 
-    const header = document.createElement('h1');
-    header.textContent = 'HEADER';
-    headerDiv.appendChild(header);
+    const headerUl = document.createElement('ul');
+    headerUl.classList.add('header');
 
-    return headerDiv;
+    for (const page of PAGES) {
+        const listItem = document.createElement('li');
+        const linkItem = document.createElement('a');
+        linkItem.textContent = page[1];
+        linkItem.href = '#';
+
+        linkItem.addEventListener('click', () => {
+            changePage(page[0]);
+        });
+
+        listItem.appendChild(linkItem);
+        headerUl.appendChild(listItem);
+    }
+
+    return headerUl;
 }
 
 function makeFooter() {

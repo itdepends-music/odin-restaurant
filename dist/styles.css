@@ -17,12 +17,13 @@ div#content {
     grid-template-rows: auto 1fr auto;
 }
 
-div#content > div {
+div#content > div,
+ul.header {
     border: 1px solid white;
     grid-column-start: 2;
 }
 
-div.header,
+ul.header,
 div.footer {
     margin: 50px 0;
     text-align: center;
@@ -69,4 +70,21 @@ div.main p {
     grid-row-end: span 2;
     align-self: flex-start;
     margin-top: 75px;
+}
+
+ul.header {
+    list-style: none;
+    padding: 0;
+    font-size: 2rem;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+ul.header a {
+    color: white;
+}
+
+ul.header a:active {
+    color: hsl(224, 89%, 50%);
 }
