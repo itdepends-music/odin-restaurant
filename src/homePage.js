@@ -1,6 +1,6 @@
 function homePage() {
     const mainDiv = document.createElement('div');
-    mainDiv.classList.add('main');
+    mainDiv.classList.add('main', 'homePage');
 
     const mainHeading = document.createElement('h1');
     mainHeading.textContent = 'Odin Restaurant';
@@ -20,7 +20,7 @@ function homePage() {
     mainFigure.appendChild(mainFigureImg);
 
     const mainFigureCaption = document.createElement('figcaption');
-    mainFigureCaption.textContent = 'Picture of Adrwahkah';
+    mainFigureCaption.textContent = 'Picture of 7skfjrl0';
     mainFigure.appendChild(mainFigureCaption);
 
     mainDiv.appendChild(mainFigure);

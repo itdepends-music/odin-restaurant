@@ -1,10 +1,12 @@
 import homePage from './homePage';
+import contactPage from './contactPage';
+import menuPage from './menuPage';
 
 function makeHeader() {
     const PAGES = [
         [homePage, 'Home'],
-        [homePage, 'Contact'],
-        [homePage, 'Menu'],
+        [contactPage, 'Contact'],
+        [menuPage, 'Menu'],
     ];
 
     const headerUl = document.createElement('ul');
